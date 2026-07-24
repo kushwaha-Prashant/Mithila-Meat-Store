@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MITHILA MEAT STORE</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<style>
+  body {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    max-width: 480px;   /* keeps it mobile-width even on desktop */
+    margin: 0 auto;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+  }
+
+  /* ---- Top delivery bar ---- */
+  .delivery-bar {
+    padding: 10px 12px 4px 12px;
+  }
+  .delivery-time {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .delivery-address {
+    font-size: 0.8rem;
+    color: #444;
+  }
+
+
+
+  /* ---- Section titles ---- */
+  .section-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 6px 0 10px 0;
+    padding: 0 12px;
+  }
+
+  /* ---- Category grid ---- */
+  .category-grid {
+    padding: 0 8px;
+  }
+  .category-item {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .category-icon {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    margin-bottom: 6px;
+  }
+  .category-label {
+    font-size: 0.72rem;
+    color: #222;
+    line-height: 1.1;
+  }
+
+  /* soft background tints per card, similar to the reference screenshot */
+  .bg-1 { background-color: #e9f7ea; }
+  .bg-2 { background-color: #fdeeea; }
+  .bg-3 { background-color: #fff6df; }
+  .bg-4 { background-color: #eaf3fd; }
+  .bg-5 { background-color: #fdeee0; }
+  .bg-6 { background-color: #eef0fb; }
+  .bg-7 { background-color: #fdecec; }
+  .bg-8 { background-color: #eefaf0; }
+  .bg-9 { background-color: #fbeee6; }
+  .bg-10 { background-color: #eaf6f6; }
+  .bg-11 { background-color: #f6ecfb; }
+  .bg-12 { background-color: #fdf3e3; }
+  
+body{
+    background:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.category-section{
+    padding:10px 8px;
+}
+
+.category-title{
+    font-size:15px;
+    font-weight:700;
+    color:#222;
+    margin-bottom:12px;
+}
+
+.category-item{
+    text-align:center;
+    margin-bottom:18px;
+}
+
+.category-card{
+    width:60px;
+    height:60px;
+    border-radius:12px;
+    background:#f5f7fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    margin:auto;
+}
+
+.category-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.category-name{
+    margin-top:6px;
+    font-size:11px;
+    font-weight:500;
+    line-height:1.2;
+    color:#222;
+}
+
+.clean-home-section{
+    padding:10px 0;
+    background:#fff;
+}
+
+.clean-banner{
+    background:url('images/banner2.png');
+    border-radius:18px 18px 0 0;
+    padding:14px 14px 8px;
+}
+
+.clean-banner h5{
+    font-size:16px;
+    font-weight:700;
+    margin-bottom:2px;
+    color:#222;
+}
+
+.clean-banner p{
+    font-size:12px;
+    color:#777;
+    margin:0;
+}
+
+.banner-img{
+    max-height:75px;
+}
+
+.category-slider{
+
+    background:#a9ddff;
+
+    display:flex;
+    gap:10px;
+
+    overflow-x:auto;
+
+    padding:12px;
+
+    border-radius:0 0 18px 18px;
+
+    scrollbar-width:none;
+}
+
+.category-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.category-card{
+
+    flex:0 0 72px;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:8px 6px;
+
+    text-align:center;
+}
+
+.category-card img{
+
+    width:42px;
+    height:42px;
+
+    object-fit:contain;
+
+    margin-bottom:6px;
+}
+
+.category-card span{
+
+    display:block;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    color:#333;
+
+    line-height:1.25;
+}
+
+/* footer */
+.app-footer{
+    background:#f8f9fa;
+    padding:40px 0 20px;
+    border-top:1px solid #e5e5e5;
+}
+
+.footer-logo{
+    width:110px;
+}
+
+.footer-tagline{
+    color:#777;
+    font-size:14px;
+    max-width:320px;
+    margin:auto;
+}
+
+.app-footer h6{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.footer-links{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer-links li{
+    margin-bottom:10px;
+}
+
+.footer-links a{
+    color:#555;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.footer-links a:hover{
+    color:#0d6efd;
+}
+
+.social-icons a{
+    width:42px;
+    height:42px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:#fff;
+    color:#333;
+    margin:0 5px;
+    text-decoration:none;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#0d6efd;
+    color:#fff;
+}
+
+.copyright{
+    font-size:13px;
+    color:#777;
+}
+
+.clean-banner{
+    background:#eef8ff;
+    border-radius:18px 18px 0 0;
+    padding:15px;
+}
+
+.clean-banner h5{
+    font-size:16px;
+    font-weight:700;
+    margin:0;
+}
+
+.clean-banner p{
+    font-size:12px;
+    color:#666;
+}
+
+.banner-img{
+    width:100%;
+    max-width:90px;
+    height:auto;
+    object-fit:contain;
+}
+
+/* Slider */
+
+.category-slider{
+    display:flex;
+    overflow-x:auto;
+    gap:10px;
+    padding:12px;
+    background:#a8dbff;
+    border-radius:0 0 18px 18px;
+    scrollbar-width:none;
+}
+
+.category-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.category-card{
+    flex:0 0 80px;
+    background:#fff;
+    border-radius:12px;
+    padding:8px;
+    text-align:center;
+}
+
+.category-card img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+    display:block;
+    margin:auto;
+}
+
+.category-card span{
+    display:block;
+    font-size:10px;
+    line-height:1.3;
+    margin-top:6px;
+    font-weight:600;
+}
+
+/* Small mobiles (320px–375px) */
+@media (max-width:576px){
+
+    .clean-banner{
+        padding:12px;
+    }
+
+    .clean-banner h5{
+        font-size:14px;
+    }
+
+    .clean-banner p{
+        font-size:11px;
+    }
+
+    .banner-img{
+        max-width:70px;
+    }
+
+    .category-card{
+        flex:0 0 72px;
+    }
+
+    .category-card img{
+        width:42px;
+        height:42px;
+    }
+
+    .category-card span{
+        font-size:9px;
+    }
+}
+.search-wrapper{
+    position:relative;
+}
+
+.search-input{
+    height:48px;
+    padding-left:45px;
+    border-radius:12px;
+}
+
+.search-icon{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:5;
+    color:#666;
+}
+
+.placeholder-wrapper{
+    position:absolute;
+    left:45px;
+    top:50%;
+    transform:translateY(-50%);
+    pointer-events:none;
+    overflow:hidden;
+    height:22px;
+    width:calc(100% - 60px);
+}
+
+#placeholderText{
+    position:absolute;
+    left:0;
+    top:0;
+    color:#777;
+    white-space:nowrap;
+    font-size:15px;
+}
+
+/* Current text goes UP */
+.slide-up{
+    animation:slideUp .45s forwards;
+}
+
+/* New text comes from DOWN */
+.slide-in{
+    animation:slideIn .45s forwards;
+}
+
+@keyframes slideUp{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100%);
+        opacity:0;
+    }
+}
+
+@keyframes slideIn{
+    from{
+        transform:translateY(100%);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Delivery info bar -->
+<div class="delivery-bar d-flex justify-content-between align-items-start">
+  <div>
+    <div class="delivery-time">Delivery in 10 minutes</div>
+    <div class="delivery-address">
+      Add you address and enjoy meats and Drinks <i class="bi bi-chevron-down"></i>
+    </div>
+  </div>
+  <a class="" href="#"><i class="bi bi-person-circle fs-4 text-success"></i></a>
+</div>
+
+<!-- Search bar -->
+<div class="search-wrapper">
+
+    <i class="bi bi-search search-icon"></i>
+
+    <input type="text" class="form-control search-input">
+
+    <div class="placeholder-wrapper">
+        <span id="placeholderText">Search "Chicken"</span>
+    </div>
+
+</div>
+
+<!-- Grocery & Kitchen -->
+<div class="section-title">Grocery &amp; Kitchen</div>
+<div class="container-fluid category-grid">
+  <div class="row row-cols-4 g-2">
+
+    <div class="col category-item">
+      <div class="category-icon bg-1"><img class="img-fluid" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/73d677d7-5b06-4e2d-86c9-31c654e49470.png"></div>
+      <div class="category-label">Pure Chicken</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-2"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt1urynuV32Ka51xcAixFux1dfwfj0lWAc40Fcgs_a6g&s=10"></div>
+      <div class="category-label">Full Chicken</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-3"><img class="img-fluid" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/874a8f73-3465-482a-8047-53c389bb5c1e.png"></div>
+      <div class="category-label">Meat Chicken</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-4"><img class="img-fluid" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/531ec37c-e9c8-4dcf-ab4d-10de0a7427b4.png"></div>
+      <div class="category-label">Chicken Pices</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-5"><img class="img-fluid" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/083ce352-d863-411c-9fd3-78021f3ca4aa.png"></div>
+      <div class="category-label">Ready to Fry Chicken</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-6"><img class="img-fluid" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/083ce352-d863-411c-9fd3-78021f3ca4aa.png"></div>
+      <div class="category-label">Ready to Fry Chicken</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-7"><img class="img-fluid" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/rc-upload-1782099128815-2131.png"></div>
+      <div class="category-label">Packet Chicken</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-8"><img class="img-fluid" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/rc-upload-1771079945541-3.png"></div>
+      <div class="category-label">Ready for Fry</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Snacks & Drinks -->
+<div class="section-title">Mutton &amp; Drinks</div>
+<Section class="container-fluid category-grid">
+  <div class="row row-cols-4 g-2">
+
+    <div class="col category-item">
+      <div class="category-icon bg-9"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvs7rrIDhi9vkrfwejtsEpTrGc12m0IZrpcybxxEt2LQ&s=10"></div>
+      <div class="category-label">raw goat meat</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-10"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsRjj7SYpkg15xUjX3hcL8pHe5PKPaFwdewCtICr6pgw&s=10"></div>
+      <div class="category-label">raw goat meat</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-11"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdXqgO41geyD-UgMxugAQhVg-8xcWrjOYEIe31Cpwbw&s=10"></div>
+      <div class="category-label">raw goat meat</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-12"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuySqR1XgqhYO22qxwLgn8c0f39phEc4xxrFN49qwb2A&s=10"></div>
+      <div class="category-label">raw goat meat</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-1"><img class="img-fluid" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/fe38d6b4-c558-43c4-9600-619547e57385.png"></div>
+      <div class="category-label">Mutton Pices</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-2"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUDjFg2mScnhUNtlOspySv6bZ-MBrOZ4RjH3s7v5I6Lw&s=10"></div>
+      <div class="category-label">Drink Juice</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-3"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDsuFFKn4wiSXEnXPvzyIGyHKf6UeGqo4rUB3kxJcORA&s=10"></div>
+      <div class="category-label">Drink</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-4"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpFPuDlPifl-G5Uhg65B9Y4wAZujXXbhQX9Du8Nbt4SA&s=10"></div>
+      <div class="category-label">Red Bull</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="pb-4"></div>
+
+<section class="container-fluid category-section">
+
+    <!-- Beauty -->
+<!-- Snacks & Drinks -->
+<div class="section-title">Mutton &amp; Drinks</div>
+<Section class="container-fluid category-grid">
+  <div class="row row-cols-4 g-2">
+
+    <div class="col category-item">
+      <div class="category-icon bg-9"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvs7rrIDhi9vkrfwejtsEpTrGc12m0IZrpcybxxEt2LQ&s=10"></div>
+      <div class="category-label">raw goat meat</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-10"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsRjj7SYpkg15xUjX3hcL8pHe5PKPaFwdewCtICr6pgw&s=10"></div>
+      <div class="category-label">raw goat meat</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-11"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdXqgO41geyD-UgMxugAQhVg-8xcWrjOYEIe31Cpwbw&s=10"></div>
+      <div class="category-label">raw goat meat</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-12"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuySqR1XgqhYO22qxwLgn8c0f39phEc4xxrFN49qwb2A&s=10"></div>
+      <div class="category-label">raw goat meat</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-1"><img class="img-fluid" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/fe38d6b4-c558-43c4-9600-619547e57385.png"></div>
+      <div class="category-label">raw goat meat</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-2"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUDjFg2mScnhUNtlOspySv6bZ-MBrOZ4RjH3s7v5I6Lw&s=10"></div>
+      <div class="category-label">Soft Drink</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-3"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDsuFFKn4wiSXEnXPvzyIGyHKf6UeGqo4rUB3kxJcORA&s=10"></div>
+      <div class="category-label">Drink</div>
+    </div>
+
+    <div class="col category-item">
+      <div class="category-icon bg-4"><img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpFPuDlPifl-G5Uhg65B9Y4wAZujXXbhQX9Du8Nbt4SA&s=10"></div>
+      <div class="category-label">Red Bul</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="pb-4"></div>
+
+    <!-- Household -->
+    <h6 class="category-title mt-2">Home FRY Chicken</h6>
+
+    <div class="row row-cols-4 g-3">
+
+        <div class="col">
+            <div class="category-item">
+                <div class="category-card">
+                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaWzrmrTHVBf-Kz1bx1uUmf8lAR1fPLp0amFSQCTafpw&s=10">
+                </div>
+                <div class="category-name">Home & Chicken FRY</div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="category-item">
+                <div class="category-card">
+                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS5CDXuxJXydG4MSVMmBX3FOEvnAo14EYHlsuv3TPSjQ&s=10">
+                </div>
+                <div class="category-name">Fry Chicken</div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="category-item">
+                <div class="category-card">
+                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwYdfyH3oeymDxdGJ46s6PQI-_KN9UL3CtXc7pfdq6Cw&s=10">
+                </div>
+                <div class="category-name">FRYED</div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="category-item">
+                <div class="category-card">
+                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMOoZniN0SYz9WG2ey9GwJJw3YzWbFANGXhaFSp5F6aQ&s=10">
+                </div>
+                <div class="category-name">Green FRY</div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Shop by Store -->
+    <h6 class="category-title mt-2">Mutton Fry</h6>
+
+    <div class="row row-cols-4 g-3">
+
+        <div class="col">
+            <div class="category-item">
+                <div class="category-card">
+                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRF_t-xhiEHCDqxJZk0PytVrNrE1RNmstgcFjpGgutMA&s=10">
+                </div>
+                <div class="category-name">Home Fry </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="category-item">
+                <div class="category-card">
+                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv0iGUfxUIG6X1Le8EnwNICjiFLeDSmKEWlE5cNAzLHA&s=10">
+                </div>
+                <div class="category-name">Spicy Mutton</div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="category-item">
+                <div class="category-card">
+                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkSrmY1zrOylcGp_fyh7K2fFG4o69xt--wCgmjoSOd2w&s=10">
+                </div>
+                <div class="category-name">Giravy Mutton</div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="category-item">
+                <div class="category-card">
+                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3unpv7Ox609InA_Xh9x72NDZTA1ch4_brHGcXuDjSCw&s=10">
+                </div>
+                <div class="category-name">Mutton Biryani</div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="clean-home-section py-2">
+
+    <div class="container-fluid px-2">
+
+        <div class="clean-banner">
+
+            <div class="row align-items-center g-2">
+
+                <div class="col-8">
+                    <h5 class="mb-1">Golden Fry, Crisp & Dip, Fry Society, Crunch Corner</h5>
+                    <p class="mb-0">Cluck N' Roll, The Daily Clucker</p>
+                </div>
+
+                <div class="col-4 text-end">
+                    <img src="images/banner2.png"
+                         class="img-fluid banner-img"
+                         alt="Cleaning Banner">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row row-cols-4 g-3">
+
+        <div class="col">
+            <div class="category-item">
+                <div class="category-card">
+                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb0vnfDVIVfpkB1sb7L7GBn3JXGTdAgKSykGyekF_m7Q&s=10">
+                </div>
+                <div class="category-name">Matka Mutton</div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="category-item">
+                <div class="category-card">
+                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbAw6t-50Jnm6EnCBLfQoiMHoH-MD0-By4oGcZdczZrA&s=10">
+                </div>
+                <div class="category-name">Bamboo Mutton</div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="category-item">
+                <div class="category-card">
+                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYeDRKsaxke7mSEyZVjrqbBwFo05QDNayeg6Yurag4Yw&s=10">
+                </div>
+                <div class="category-name">Chicken Fry</div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="category-item">
+                <div class="category-card">
+                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoUyz3yYa4fg-vrBmPxJFsxtcRCbEMp-omqzJDAMzuzw&s=10">
+                </div>
+                <div class="category-name">Fresh Egg</div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+</section>
+
+<footer class="app-footer mt-4">
+
+    <div class="container">
+
+        <!-- Logo -->
+        <div class="text-center mb-4">
+            <img src="logo.png" alt="Logo" class="footer-logo">
+            <p class="footer-tagline mt-2">
+                Delivering groceries, daily essentials, beauty products, and more at your doorstep.
+            </p>
+        </div>
+
+        <!-- Links -->
+        <div class="row">
+
+            <div class="col-6">
+                <h6>Quick Links</h6>
+
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6">
+                <h6>Customer</h6>
+
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Social -->
+        <div class="social-icons text-center mt-4">
+
+            <a href="#"><i class="bi bi-facebook"></i></a>
+
+            <a href="#"><i class="bi bi-instagram"></i></a>
+
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+
+            <a href="#"><i class="bi bi-youtube"></i></a>
+
+        </div>
+
+        <hr>
+
+        <div class="copyright text-center">
+            © 2026 Your Store. All Rights Reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS (optional, for future interactive components) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script>
+
+const items=[
+'Search "Chicken"',
+'Search "Leg Piece Chicken"',
+'Search "Mutton"',
+'Search "Egg"',
+];
+
+let index=0;
+
+const holder=document.getElementById("placeholderText");
+
+setInterval(()=>{
+
+    holder.classList.add("slide-up");
+
+    holder.addEventListener("animationend",function change(){
+
+        holder.removeEventListener("animationend",change);
+
+        index=(index+1)%items.length;
+
+        holder.classList.remove("slide-up");
+
+        holder.textContent=items[index];
+
+        holder.classList.add("slide-in");
+
+        holder.addEventListener("animationend",function done(){
+
+            holder.removeEventListener("animationend",done);
+
+            holder.classList.remove("slide-in");
+
+        });
+
+    });
+
+},2000);
+
+</script>
+</body>
+</html>
